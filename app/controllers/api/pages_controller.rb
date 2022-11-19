@@ -5,6 +5,8 @@ class Api::PagesController < ApplicationController
   end
 
   def show
+    @page = Page.find(params[:id])
+    render json: @page
   end
 
   def create
